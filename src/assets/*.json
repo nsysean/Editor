@@ -1,0 +1,106 @@
+{
+    "*": [
+        {
+            "Name": "Editor",
+            "Content": [
+                {
+                    "Name": "Animations",
+                    "Selections": [
+                        "Smooth", "Instant"
+                    ]
+                },
+                {
+                    "Name": "TabSize",
+                    "Selections": [
+                        "2", "4"
+                    ]
+                },
+                {
+                    "Name": "CursorStyle",
+                    "Selections": [
+                        "line",
+                        "block",
+                        "underline",
+                        "line-thin",
+                        "block-outline",
+                        "underline-thin"
+                    ]
+                },
+                {
+                    "Name": "Themes",
+                    "Selections": [
+                        "Abyss",
+                        "AtlanticNight",
+                        "AtomOneDark",
+                        "AuroraX",
+                        "AyuDark",
+                        "AyuLight",
+                        "BlulocoLight",
+                        "CodeSandBox",
+                        "ColdNight",
+                        "CommunityMaterial",
+                        "Darcula",
+                        "Dark",
+                        "DarkPlus",
+                        "Darktooth",
+                        "Dracula",
+                        "EvaDark",
+                        "EvaLight",
+                        "Hopscotch",
+                        "HybridNext",
+                        "KimbieDark",
+                        "LaserWave",
+                        "Lucario",
+                        "MacDark",
+                        "Min",
+                        "MonokaiDimmed",
+                        "MonokaiPro",
+                        "Nebula",
+                        "NightCoder",
+                        "NightHacker",
+                        "NoctisAzureus",
+                        "NoctisBordo",
+                        "NoctisLux",
+                        "Ocean",
+                        "OneDarkPro",
+                        "OneMonokai",
+                        "Panda",
+                        "ReUI",
+                        "RemedyDark",
+                        "ShadesOfPurple",
+                        "SnazzyOperator",
+                        "SublimeMaterialThemeDark",
+                        "SynthWave84",
+                        "TokyoNight",
+                        "TokyoNightStorm",
+                        "TomorrowNightBlue",
+                        "Twilight",
+                        "XcodeDark"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Compiler",
+            "Content": [
+                {
+                    "Name": "Languages",
+                    "Selections": [
+                        "C++14",
+                        "C++17",
+                        "Python",
+                        "Kotlin",
+                        "Pascal"
+                    ]
+                },
+                {
+                    "Name": "Mode",
+                    "Selections": [
+                        "Interactive",
+                        "Text"
+                    ]
+                }
+            ]
+        }
+    ]
+}
