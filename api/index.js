@@ -60,6 +60,6 @@ app.ws('/', function(ws, res) {
 // 
 app.listen(3001);
 /*
-{ "Type": "Text", "Code": "\"#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  int n;\n  while(cin >> n) {\n    cout << n << '\\n';\n  }\n  return 1;\n}\"" }
+{ "Type": "Interactive", "Code": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n;\n    while (cin >> n) cout << n << '\\n';\n}" }
 */
 // sudo docker ps | awk {' print $1 '} | tail -n+2 > tmp.txt; for line in $(cat tmp.txt); do sudo docker kill $line; done; rm tmp.txt

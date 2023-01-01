@@ -28,12 +28,10 @@ export default {
                     Type: localStorage.Mode ? localStorage.getItem('Mode') : 'Interactive',
                     Code: window.editor.getValue()
                 }));
-                console.log(window.editor.getValue());
             }
             socket.onmessage = function(event) {
-                console.log(event.data);
                 stuff += event.data.replaceAll('\n', '\r\n');
-                window.term.write(event.data);
+                window.term.println(event.data);
             };
             socket.onclose = function() {
                 emitter.emit('boop');
@@ -42,10 +40,10 @@ export default {
         emitter.on('endrun', function() {
             t.loadFakeEditor(0, stuff);
         });
-        emitter.on('stuff', function(data){stuff+=data+'\n';});
+        emitter.on('stuff', function(data){stuff+=data+'\r\n';});
     },
     methods: {
-        loadEditor(time, stuff) {
+        loadEditor(time) {
             setTimeout(function() {
                 document.getElementById('main').innerHTML = '';
                 var style = getComputedStyle(document.body);
@@ -63,12 +61,11 @@ export default {
                 // 
                 const localEcho = new LocalEchoAddon();
                 term.loadAddon(localEcho);
-                localEcho.println(stuff);
                 const prompt = "";
                 const readLine = async () => {
                     const input = await localEcho.read(prompt);
-                    localEcho.println(input);
                     window.socket.send(input);
+                    window.term = localEcho;
                     emitter.emit('stuff', input);
                     readLine();
                 };
@@ -86,12 +83,11 @@ export default {
                         cursorAccent: style.getPropertyValue('--textPreformatforeground')
                     }
                 });
-                window.term = term;
                 window.fitAddon = new FitAddon();
                 term.loadAddon(window.fitAddon);
                 term.open(document.getElementById('main'));
                 window.fitAddon.fit();
-                term.write(stuff);
+                term.write(stuff.replaceAll('\n', '\r\n'));
             }, time);
         }
     }

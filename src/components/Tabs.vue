@@ -27,7 +27,6 @@ export default {
         emitter.emit('startrun');
       } else emitter.emit('endrun');
       this.call(false);
-      console.log(document.getElementsByTagName('a')[0].innerHTML, document.getElementsByTagName('a')[0].innerHTML.search('fa-play'));
       document.getElementsByTagName('a')[0].innerHTML = (
       document.getElementsByTagName('a')[0].innerHTML.search('fa-play') != -1
       ? '<i class="fa-solid fa-stop" style="vertical-align: middle"></i>'
